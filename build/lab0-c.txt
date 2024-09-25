@@ -32,7 +32,7 @@ joseph@LJ-L23 lab0 % clear && ssh joseph@10.93.24.136
 Last login: Mon Sep 23 14:51:20 EDT 2024 from 10.93.22.236 on ssh
 Have a lot of fun...
 joseph@localhost:~> sudo zypper install git-core cross-riscv64-gcc14 cross-riscv64-elf-gcc14 make gcc dtc libboost_regex-devel libboost_system-devel gcc-c++
-[sudo] password for root: 
+[sudo] password for root:
 Loading repository data...
 Reading installed packages...
 Resolving package dependencies...
@@ -54,94 +54,94 @@ Package install size change:
     1.34 GiB  |  -      0 B    released by packages that will be removed
 
 Backend:  classic_rpmtrans
-Continue? [y/n/v/...? shows all options] (y): 
-Retrieving: cross-riscv64-binutils-2.43-2.1.aarch64 (Main Repository (OSS))                         (1/44),   2.2 MiB    
+Continue? [y/n/v/...? shows all options] (y):
+Retrieving: cross-riscv64-binutils-2.43-2.1.aarch64 (Main Repository (OSS))                         (1/44),   2.2 MiB
 Retrieving: cross-riscv64-binutils-2.43-2.1.aarch64.rpm ...............................................[done (1.8 MiB/s)]
-Retrieving: cross-riscv64-linux-glibc-devel-6.11-1.1.noarch (Main Repository (OSS))                 (2/44),   1.3 MiB    
+Retrieving: cross-riscv64-linux-glibc-devel-6.11-1.1.noarch (Main Repository (OSS))                 (2/44),   1.3 MiB
 Retrieving: cross-riscv64-linux-glibc-devel-6.11-1.1.noarch.rpm .......................................[done (2.0 MiB/s)]
-Retrieving: cross-riscv64-newlib-devel-4.3.0.20230120-3.1.aarch64 (Main Repository (OSS))           (3/44),   3.9 MiB    
+Retrieving: cross-riscv64-newlib-devel-4.3.0.20230120-3.1.aarch64 (Main Repository (OSS))           (3/44),   3.9 MiB
 Retrieving: cross-riscv64-newlib-devel-4.3.0.20230120-3.1.aarch64.rpm .................................[done (2.3 MiB/s)]
-Retrieving: libasan8-14.2.0+git10526-2.1.aarch64 (Main Repository (OSS))                            (4/44), 461.1 KiB    
+Retrieving: libasan8-14.2.0+git10526-2.1.aarch64 (Main Repository (OSS))                            (4/44), 461.1 KiB
 Retrieving: libasan8-14.2.0+git10526-2.1.aarch64.rpm ..................................................[done (1.4 MiB/s)]
-Retrieving: libatomic1-14.2.0+git10526-2.1.aarch64 (Main Repository (OSS))                          (5/44),  23.5 KiB    
+Retrieving: libatomic1-14.2.0+git10526-2.1.aarch64 (Main Repository (OSS))                          (5/44),  23.5 KiB
 Retrieving: libatomic1-14.2.0+git10526-2.1.aarch64.rpm ............................................................[done]
-Retrieving: libboost_regex1_86_0-1.86.0-1.1.aarch64 (Main Repository (OSS))                         (6/44), 100.3 KiB    
+Retrieving: libboost_regex1_86_0-1.86.0-1.1.aarch64 (Main Repository (OSS))                         (6/44), 100.3 KiB
 Retrieving: libboost_regex1_86_0-1.86.0-1.1.aarch64.rpm .............................................[done (673.9 KiB/s)]
-Retrieving: libboost_system1_86_0-1.86.0-1.1.aarch64 (Main Repository (OSS))                        (7/44),  13.4 KiB    
+Retrieving: libboost_system1_86_0-1.86.0-1.1.aarch64 (Main Repository (OSS))                        (7/44),  13.4 KiB
 Retrieving: libboost_system1_86_0-1.86.0-1.1.aarch64.rpm ..........................................................[done]
-Retrieving: libctf-nobfd0-2.43-2.1.aarch64 (Main Repository (OSS))                                  (8/44), 138.5 KiB    
+Retrieving: libctf-nobfd0-2.43-2.1.aarch64 (Main Repository (OSS))                                  (8/44), 138.5 KiB
 Retrieving: libctf-nobfd0-2.43-2.1.aarch64.rpm ......................................................[done (690.4 KiB/s)]
-Retrieving: libfdt1-1.7.0-1.3.aarch64 (Main Repository (OSS))                                       (9/44),  27.9 KiB    
+Retrieving: libfdt1-1.7.0-1.3.aarch64 (Main Repository (OSS))                                       (9/44),  27.9 KiB
 Retrieving: libfdt1-1.7.0-1.3.aarch64.rpm .........................................................................[done]
-Retrieving: libgomp1-14.2.0+git10526-2.1.aarch64 (Main Repository (OSS))                           (10/44), 146.9 KiB    
+Retrieving: libgomp1-14.2.0+git10526-2.1.aarch64 (Main Repository (OSS))                           (10/44), 146.9 KiB
 Retrieving: libgomp1-14.2.0+git10526-2.1.aarch64.rpm ................................................[done (644.5 KiB/s)]
-Retrieving: libhwasan0-14.2.0+git10526-2.1.aarch64 (Main Repository (OSS))                         (11/44), 245.2 KiB    
+Retrieving: libhwasan0-14.2.0+git10526-2.1.aarch64 (Main Repository (OSS))                         (11/44), 245.2 KiB
 Retrieving: libhwasan0-14.2.0+git10526-2.1.aarch64.rpm ..............................................[done (697.9 KiB/s)]
-Retrieving: libicu-devel-75.1-1.1.aarch64 (Main Repository (OSS))                                  (12/44), 711.3 KiB    
+Retrieving: libicu-devel-75.1-1.1.aarch64 (Main Repository (OSS))                                  (12/44), 711.3 KiB
 Retrieving: libicu-devel-75.1-1.1.aarch64.rpm .........................................................[done (1.5 MiB/s)]
-Retrieving: libisl23-0.26-1.6.aarch64 (Main Repository (OSS))                                      (13/44), 667.0 KiB    
+Retrieving: libisl23-0.26-1.6.aarch64 (Main Repository (OSS))                                      (13/44), 667.0 KiB
 Retrieving: libisl23-0.26-1.6.aarch64.rpm .............................................................[done (1.2 MiB/s)]
-Retrieving: libitm1-14.2.0+git10526-2.1.aarch64 (Main Repository (OSS))                            (14/44),  39.3 KiB    
+Retrieving: libitm1-14.2.0+git10526-2.1.aarch64 (Main Repository (OSS))                            (14/44),  39.3 KiB
 Retrieving: libitm1-14.2.0+git10526-2.1.aarch64.rpm ...............................................................[done]
-Retrieving: liblsan0-14.2.0+git10526-2.1.aarch64 (Main Repository (OSS))                           (15/44), 201.4 KiB    
+Retrieving: liblsan0-14.2.0+git10526-2.1.aarch64 (Main Repository (OSS))                           (15/44), 201.4 KiB
 Retrieving: liblsan0-14.2.0+git10526-2.1.aarch64.rpm ................................................[done (579.3 KiB/s)]
-Retrieving: libmpc3-1.3.1-1.8.aarch64 (Main Repository (OSS))                                      (16/44),  67.1 KiB    
+Retrieving: libmpc3-1.3.1-1.8.aarch64 (Main Repository (OSS))                                      (16/44),  67.1 KiB
 Retrieving: libmpc3-1.3.1-1.8.aarch64.rpm .........................................................................[done]
-Retrieving: libsha1detectcoll1-1.0.3-5.1.aarch64 (Main Repository (OSS))                           (17/44),  26.8 KiB    
+Retrieving: libsha1detectcoll1-1.0.3-5.1.aarch64 (Main Repository (OSS))                           (17/44),  26.8 KiB
 Retrieving: libsha1detectcoll1-1.0.3-5.1.aarch64.rpm ..............................................................[done]
-Retrieving: libtsan2-14.2.0+git10526-2.1.aarch64 (Main Repository (OSS))                           (18/44), 411.4 KiB    
+Retrieving: libtsan2-14.2.0+git10526-2.1.aarch64 (Main Repository (OSS))                           (18/44), 411.4 KiB
 Retrieving: libtsan2-14.2.0+git10526-2.1.aarch64.rpm ..................................................[done (1.5 MiB/s)]
-Retrieving: libubsan1-14.2.0+git10526-2.1.aarch64 (Main Repository (OSS))                          (19/44), 186.3 KiB    
+Retrieving: libubsan1-14.2.0+git10526-2.1.aarch64 (Main Repository (OSS))                          (19/44), 186.3 KiB
 Retrieving: libubsan1-14.2.0+git10526-2.1.aarch64.rpm ...............................................[done (587.0 KiB/s)]
-Retrieving: libxcrypt-devel-4.4.36-1.4.aarch64 (Main Repository (OSS))                             (20/44),  34.3 KiB    
+Retrieving: libxcrypt-devel-4.4.36-1.4.aarch64 (Main Repository (OSS))                             (20/44),  34.3 KiB
 Retrieving: libxcrypt-devel-4.4.36-1.4.aarch64.rpm ................................................................[done]
-Retrieving: linux-glibc-devel-6.11-1.1.aarch64 (Main Repository (OSS))                             (21/44),   1.3 MiB    
+Retrieving: linux-glibc-devel-6.11-1.1.aarch64 (Main Repository (OSS))                             (21/44),   1.3 MiB
 Retrieving: linux-glibc-devel-6.11-1.1.aarch64.rpm ....................................................[done (1.8 MiB/s)]
-Retrieving: make-4.4.1-3.1.aarch64 (Main Repository (OSS))                                         (22/44), 321.8 KiB    
+Retrieving: make-4.4.1-3.1.aarch64 (Main Repository (OSS))                                         (22/44), 321.8 KiB
 Retrieving: make-4.4.1-3.1.aarch64.rpm ................................................................[done (1.3 MiB/s)]
-Retrieving: site-config-0.2-14.6.aarch64 (Main Repository (OSS))                                   (23/44),  17.3 KiB    
+Retrieving: site-config-0.2-14.6.aarch64 (Main Repository (OSS))                                   (23/44),  17.3 KiB
 Retrieving: site-config-0.2-14.6.aarch64.rpm ......................................................................[done]
-Retrieving: cross-riscv64-glibc-devel-2.40-1.1.noarch (Main Repository (OSS))                      (24/44),  18.5 MiB    
+Retrieving: cross-riscv64-glibc-devel-2.40-1.1.noarch (Main Repository (OSS))                      (24/44),  18.5 MiB
 Retrieving: cross-riscv64-glibc-devel-2.40-1.1.noarch.rpm .............................................[done (8.0 MiB/s)]
-Retrieving: libctf0-2.43-2.1.aarch64 (Main Repository (OSS))                                       (25/44), 137.4 KiB    
+Retrieving: libctf0-2.43-2.1.aarch64 (Main Repository (OSS))                                       (25/44), 137.4 KiB
 Retrieving: libctf0-2.43-2.1.aarch64.rpm ............................................................[done (355.6 KiB/s)]
-Retrieving: binutils-2.43-2.1.aarch64 (Main Repository (OSS))                                      (26/44),   7.8 MiB    
+Retrieving: binutils-2.43-2.1.aarch64 (Main Repository (OSS))                                      (26/44),   7.8 MiB
 Retrieving: binutils-2.43-2.1.aarch64.rpm .............................................................[done (6.8 MiB/s)]
-Retrieving: dtc-1.7.0-1.3.aarch64 (Main Repository (OSS))                                          (27/44),  93.3 KiB    
+Retrieving: dtc-1.7.0-1.3.aarch64 (Main Repository (OSS))                                          (27/44),  93.3 KiB
 Retrieving: dtc-1.7.0-1.3.aarch64.rpm .............................................................................[done]
-Retrieving: cpp14-14.2.0+git10526-2.1.aarch64 (Main Repository (OSS))                              (28/44),  10.6 MiB    
+Retrieving: cpp14-14.2.0+git10526-2.1.aarch64 (Main Repository (OSS))                              (28/44),  10.6 MiB
 Retrieving: cpp14-14.2.0+git10526-2.1.aarch64.rpm .....................................................[done (9.5 MiB/s)]
-Retrieving: git-core-2.46.0-2.1.aarch64 (Main Repository (OSS))                                    (29/44),   5.8 MiB    
+Retrieving: git-core-2.46.0-2.1.aarch64 (Main Repository (OSS))                                    (29/44),   5.8 MiB
 Retrieving: git-core-2.46.0-2.1.aarch64.rpm ...........................................................[done (3.1 MiB/s)]
-Retrieving: glibc-devel-2.40-1.1.aarch64 (Main Repository (OSS))                                   (30/44), 614.3 KiB    
+Retrieving: glibc-devel-2.40-1.1.aarch64 (Main Repository (OSS))                                   (30/44), 614.3 KiB
 Retrieving: glibc-devel-2.40-1.1.aarch64.rpm ........................................................[done (761.9 KiB/s)]
-Retrieving: cpp-14-1.1.aarch64 (Main Repository (OSS))                                             (31/44),   8.7 KiB    
+Retrieving: cpp-14-1.1.aarch64 (Main Repository (OSS))                                             (31/44),   8.7 KiB
 Retrieving: cpp-14-1.1.aarch64.rpm ................................................................................[done]
-Retrieving: libstdc++6-devel-gcc14-14.2.0+git10526-2.1.aarch64 (Main Repository (OSS))             (32/44),  12.7 MiB    
+Retrieving: libstdc++6-devel-gcc14-14.2.0+git10526-2.1.aarch64 (Main Repository (OSS))             (32/44),  12.7 MiB
 Retrieving: libstdc++6-devel-gcc14-14.2.0+git10526-2.1.aarch64.rpm ....................................[done (1.5 MiB/s)]
-Retrieving: gcc14-14.2.0+git10526-2.1.aarch64 (Main Repository (OSS))                              (33/44),  35.6 MiB    
+Retrieving: gcc14-14.2.0+git10526-2.1.aarch64 (Main Repository (OSS))                              (33/44),  35.6 MiB
 Retrieving: gcc14-14.2.0+git10526-2.1.aarch64.rpm .....................................................[done (1.9 MiB/s)]
-Retrieving: libstdc++-devel-14-1.1.aarch64 (Main Repository (OSS))                                 (34/44),   7.8 KiB    
+Retrieving: libstdc++-devel-14-1.1.aarch64 (Main Repository (OSS))                                 (34/44),   7.8 KiB
 Retrieving: libstdc++-devel-14-1.1.aarch64.rpm ....................................................................[done]
-Retrieving: cross-riscv64-gcc14-14.2.0+git10526-2.1.aarch64 (Main Repository (OSS))                (35/44), 373.2 MiB    
+Retrieving: cross-riscv64-gcc14-14.2.0+git10526-2.1.aarch64 (Main Repository (OSS))                (35/44), 373.2 MiB
 Retrieving: cross-riscv64-gcc14-14.2.0+git10526-2.1.aarch64.rpm .......................................[done (1.8 MiB/s)]
-Retrieving: cross-riscv64-elf-gcc14-14.2.0+git10526-2.1.aarch64 (Main Repository (OSS))            (36/44), 309.6 MiB    
+Retrieving: cross-riscv64-elf-gcc14-14.2.0+git10526-2.1.aarch64 (Main Repository (OSS))            (36/44), 309.6 MiB
 Retrieving: cross-riscv64-elf-gcc14-14.2.0+git10526-2.1.aarch64.rpm ...................................[done (1.8 MiB/s)]
-Retrieving: gcc14-c++-14.2.0+git10526-2.1.aarch64 (Main Repository (OSS))                          (37/44),  12.0 MiB    
+Retrieving: gcc14-c++-14.2.0+git10526-2.1.aarch64 (Main Repository (OSS))                          (37/44),  12.0 MiB
 Retrieving: gcc14-c++-14.2.0+git10526-2.1.aarch64.rpm .................................................[done (2.0 MiB/s)]
-Retrieving: gcc-14-1.1.aarch64 (Main Repository (OSS))                                             (38/44),   9.7 KiB    
+Retrieving: gcc-14-1.1.aarch64 (Main Repository (OSS))                                             (38/44),   9.7 KiB
 Retrieving: gcc-14-1.1.aarch64.rpm ................................................................................[done]
-Retrieving: libboost_headers1_86_0-devel-1.86.0-1.1.aarch64 (Main Repository (OSS))                (39/44),  11.8 MiB    
+Retrieving: libboost_headers1_86_0-devel-1.86.0-1.1.aarch64 (Main Repository (OSS))                (39/44),  11.8 MiB
 Retrieving: libboost_headers1_86_0-devel-1.86.0-1.1.aarch64.rpm .......................................[done (1.8 MiB/s)]
-Retrieving: gcc-c++-14-1.1.aarch64 (Main Repository (OSS))                                         (40/44),   8.5 KiB    
+Retrieving: gcc-c++-14-1.1.aarch64 (Main Repository (OSS))                                         (40/44),   8.5 KiB
 Retrieving: gcc-c++-14-1.1.aarch64.rpm ............................................................................[done]
-Retrieving: libboost_system1_86_0-devel-1.86.0-1.1.aarch64 (Main Repository (OSS))                 (41/44),  14.6 KiB    
+Retrieving: libboost_system1_86_0-devel-1.86.0-1.1.aarch64 (Main Repository (OSS))                 (41/44),  14.6 KiB
 Retrieving: libboost_system1_86_0-devel-1.86.0-1.1.aarch64.rpm ....................................................[done]
-Retrieving: libboost_regex1_86_0-devel-1.86.0-1.1.aarch64 (Main Repository (OSS))                  (42/44),  14.6 KiB    
+Retrieving: libboost_regex1_86_0-devel-1.86.0-1.1.aarch64 (Main Repository (OSS))                  (42/44),  14.6 KiB
 Retrieving: libboost_regex1_86_0-devel-1.86.0-1.1.aarch64.rpm .....................................................[done]
-Retrieving: libboost_system-devel-1.86.0-1.1.noarch (Main Repository (OSS))                        (43/44),   7.6 KiB    
+Retrieving: libboost_system-devel-1.86.0-1.1.noarch (Main Repository (OSS))                        (43/44),   7.6 KiB
 Retrieving: libboost_system-devel-1.86.0-1.1.noarch.rpm ...........................................................[done]
-Retrieving: libboost_regex-devel-1.86.0-1.1.noarch (Main Repository (OSS))                         (44/44),   7.6 KiB    
+Retrieving: libboost_regex-devel-1.86.0-1.1.noarch (Main Repository (OSS))                         (44/44),   7.6 KiB
 Retrieving: libboost_regex-devel-1.86.0-1.1.noarch.rpm ............................................................[done]
 
 Checking for file conflicts: ......................................................................................[done]
@@ -211,7 +211,7 @@ checking host system type... riscv64-unknown-elf
 checking for riscv64-elf-gcc... riscv64-elf-gcc
 checking whether the C compiler works... yes
 checking for C compiler default output file name... a.out
-checking for suffix of executables... 
+checking for suffix of executables...
 checking whether we are cross compiling... yes
 checking for suffix of object files... o
 checking whether the compiler supports GNU C... yes
@@ -461,7 +461,7 @@ riscv64-elf-gcc -MMD -MP -Wall -Werror -D__NO_INLINE__ -mcmodel=medany -O2 -std=
 riscv64-elf-gcc -Wl,--build-id=none -nostartfiles -nostdlib -static    -fno-stack-protector -o bbl bbl.o -L.  -lbbl  -ldummy_payload  -lmachine  -lsoftfloat  -lutil -lgcc -Wl,--defsym=MEM_START=0x80000000,-T,../bbl/bbl.lds
 riscv64-elf-objcopy -S -O binary --change-addresses -0x80000000 bbl bbl.bin
 joseph@localhost:~/sources/riscv-pk/build> sudo make install
-[sudo] password for root: 
+[sudo] password for root:
 ../scripts/mk-install-dirs.sh //usr/local/riscv64-elf/include/riscv-pk
 mkdir //usr/local/riscv64-elf
 mkdir //usr/local/riscv64-elf/include
@@ -495,13 +495,13 @@ Resolving deltas: 100% (15482/15482), done.
 joseph@localhost:~/sources> cd riscv-isa-sim/
 joseph@localhost:~/sources/riscv-isa-sim> mkdir build
 joseph@localhost:~/sources/riscv-isa-sim> cd build/
-joseph@localhost:~/sources/riscv-isa-sim/build> ../configure 
+joseph@localhost:~/sources/riscv-isa-sim/build> ../configure
 checking build system type... aarch64-unknown-linux-gnu
 checking host system type... aarch64-unknown-linux-gnu
 checking for gcc... gcc
 checking whether the C compiler works... yes
 checking for C compiler default output file name... a.out
-checking for suffix of executables... 
+checking for suffix of executables...
 checking whether we are cross compiling... no
 checking for suffix of object files... o
 checking whether the compiler supports GNU C... yes
@@ -3016,7 +3016,7 @@ rm -f libspike_dasm.a
 ar rcs libspike_dasm.a spike_dasm_option_parser.o
 g++ -L. -Wl,--export-dynamic -L/usr/lib64  -Wl,-rpath,/usr/local/lib   -o spike-dasm spike-dasm.o  libspike_dasm.a  libriscv.a  libsoftfloat.a  libdisasm.a -lpthread -lboost_regex -lboost_system -lpthread  -lboost_system -lboost_regex
 joseph@localhost:~/sources/riscv-isa-sim/build> sudo make install
-[sudo] password for root: 
+[sudo] password for root:
 ../scripts/mk-install-dirs.sh /usr/local/include
 for file in fesvr/byteorder.h fesvr/elf.h fesvr/elfloader.h fesvr/htif.h fesvr/dtm.h fesvr/memif.h fesvr/syscall.h fesvr/context.h fesvr/htif_pthread.h fesvr/htif_hexwriter.h fesvr/option_parser.h fesvr/term.h fesvr/device.h fesvr/rfb.h fesvr/tsi.h riscv/abstract_device.h riscv/abstract_interrupt_controller.h riscv/cachesim.h riscv/cfg.h riscv/common.h riscv/csrs.h riscv/debug_defines.h riscv/debug_module.h riscv/debug_rom_defines.h riscv/decode.h riscv/devices.h riscv/disasm.h riscv/dts.h riscv/encoding.h riscv/entropy_source.h riscv/extension.h riscv/isa_parser.h riscv/log_file.h riscv/memtracer.h riscv/mmu.h riscv/platform.h riscv/processor.h riscv/rocc.h riscv/sim.h riscv/simif.h riscv/trap.h riscv/triggers.h riscv/vector_unit.h fdt/libfdt.h fdt/fdt.h fdt/libfdt_env.h softfloat/softfloat.h softfloat/softfloat_types.h; \
   do \
@@ -3054,25 +3054,25 @@ for file in riscv-fesvr.pc riscv-riscv.pc riscv-disasm.pc; \
   done
 joseph@localhost:~/sources/riscv-isa-sim/build> cd ~/programs/
 joseph@localhost:~/programs> cd hello/
-joseph@localhost:~/programs/hello> cat hello.c 
+joseph@localhost:~/programs/hello> cat hello.c
 #include <stdio.h>
 
 int main() {
     printf("Hello world!\n");
 }
-joseph@localhost:~/programs/hello> gcc -o hello-aarch64 hello.c 
+joseph@localhost:~/programs/hello> gcc -o hello-aarch64 hello.c
 joseph@localhost:~/programs/hello> riscv64-elf-gc
 riscv64-elf-gcc            riscv64-elf-gcc-nm         riscv64-elf-gcov           riscv64-elf-gcov-tool
 riscv64-elf-gcc-14         riscv64-elf-gcc-nm-14      riscv64-elf-gcov-14        riscv64-elf-gcov-tool-14
-riscv64-elf-gcc-ar         riscv64-elf-gcc-ranlib     riscv64-elf-gcov-dump      
-riscv64-elf-gcc-ar-14      riscv64-elf-gcc-ranlib-14  riscv64-elf-gcov-dump-14   
+riscv64-elf-gcc-ar         riscv64-elf-gcc-ranlib     riscv64-elf-gcov-dump
+riscv64-elf-gcc-ar-14      riscv64-elf-gcc-ranlib-14  riscv64-elf-gcov-dump-14
 joseph@localhost:~/programs/hello> riscv64-elf-gcc -o hello-riscv64 hello.c
-joseph@localhost:~/programs/hello> ./hello-aarch64 
+joseph@localhost:~/programs/hello> ./hello-aarch64
 Hello world!
-joseph@localhost:~/programs/hello> spike /usr/local/riscv64-elf/bin/pk hello-riscv64 
+joseph@localhost:~/programs/hello> spike /usr/local/riscv64-elf/bin/pk hello-riscv64
 Hello world!
 joseph@localhost:~/programs/hello> cd ../factorinator/
-joseph@localhost:~/programs/factorinator> cat factorinator.cpp 
+joseph@localhost:~/programs/factorinator> cat factorinator.cpp
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -3094,18 +3094,18 @@ int main(int argc, char const *argv[])
         printf("Mate. I need a number.\n");
     }
 }
-joseph@localhost:~/programs/factorinator> g++ -o factorinator-aarch64 factorinator.cpp 
-joseph@localhost:~/programs/factorinator> riscv64-elf-g++ -o factorinator-riscv64 factorinator.cpp 
-joseph@localhost:~/programs/factorinator> ./factorinator-aarch64 
+joseph@localhost:~/programs/factorinator> g++ -o factorinator-aarch64 factorinator.cpp
+joseph@localhost:~/programs/factorinator> riscv64-elf-g++ -o factorinator-riscv64 factorinator.cpp
+joseph@localhost:~/programs/factorinator> ./factorinator-aarch64
 Mate. I need a number.
-joseph@localhost:~/programs/factorinator> spike /usr/local/riscv64-elf/bin/pk factorinator-riscv64 
+joseph@localhost:~/programs/factorinator> spike /usr/local/riscv64-elf/bin/pk factorinator-riscv64
 Mate. I need a number.
 joseph@localhost:~/programs/factorinator> ./factorinator-aarch64 584098
 Factors of 584098: 1 2 19 38 361 722 809 1618 15371 30742 292049 584098
 joseph@localhost:~/programs/factorinator> spike /usr/local/riscv64-elf/bin/pk factorinator-riscv64 584098
 Factors of 584098: 1 2 19 38 361 722 809 1618 15371 30742 292049 584098
 joseph@localhost:~/programs/factorinator> cd ../hello/
-joseph@localhost:~/programs/hello> objdump --disassemble-all hello-aarch64 
+joseph@localhost:~/programs/hello> objdump --disassemble-all hello-aarch64
 
 hello-aarch64:     file format elf64-littleaarch64
 
@@ -4514,4 +4514,4 @@ Disassembly of section .debug_rnglists:
   40:	06b8070c 	.inst	0x06b8070c ; undefined
   44:	00000040 	udf	#64
   48:	000c0000 	.inst	0x000c0000 ; undefined
-joseph@localhost:~/programs/hello> 
+joseph@localhost:~/programs/hello>
