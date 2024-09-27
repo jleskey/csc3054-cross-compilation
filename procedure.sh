@@ -2,25 +2,24 @@
 
 set -e
 
-# Set up output proxy.
+# Set constants.
 
-exec 3>&1
-exec >detailed_log.txt 2>&1
+DETAILED_LOGFILE=detailed_log.txt
 
 # Set up handlers.
 
 evoke() {
     WORKING_PATH=pwd | sed "s|$HOME|~|"
-    echo ":$WORKING_PATH> $*"
-    "$@"
+    echo ":$WORKING_PATH> $*" >> $DETAILED_LOGFILE
+    "$@" >> $DETAILED_LOGFILE
 }
 
 start() {
-    echo -n "$@ . . ." >&3
+    echo -n "$@ . . ."
 }
 
 end() {
-    echo " done!" >&3
+    echo " done!"
 }
 
 # Install all dependencies.
