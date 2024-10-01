@@ -231,7 +231,7 @@ describe "size hello-$ARCH"
 evoke size hello-$ARCH
 
 describe "size hello-riscv64"
-evoke size hello-riscv64
+evoke riscv64-elf-size hello-riscv64
 
 describe "nm hello-$ARCH"
 evoke nm --print-size hello-$ARCH
