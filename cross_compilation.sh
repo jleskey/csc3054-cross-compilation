@@ -60,6 +60,7 @@ finish
 
 # Make some useful directories.
 
+cd
 evoke mkdir sources programs
 
 # Enter the sources directory and clone relevant repositories.
