@@ -5,25 +5,49 @@ set -e
 # Set constants.
 
 DETAILED_LOGFILE=detailed_log.txt
+ARCH=$(uname -m)
 
 # Set up handlers.
 
+section() {
+    echo
+}
+
 evoke() {
-    WORKING_PATH=pwd | sed "s|$HOME|~|"
+    WORKING_PATH=$(pwd | sed "s|$HOME|~|")
     echo ":$WORKING_PATH> $*" >> $DETAILED_LOGFILE
     "$@" >> $DETAILED_LOGFILE
+}
+
+print_evoke() {
+    WORKING_PATH=$(pwd | sed "s|$HOME|~|")
+    echo ":$WORKING_PATH> $*" >> $DETAILED_LOGFILE
+    "$@" | tee -a $DETAILED_LOGFILE
+}
+
+export_evoke() {
+    OUTPUT_FILE="$1"
+    WORKING_PATH=$(pwd | sed "s|$HOME|~|")
+    shift
+    echo ":$WORKING_PATH> $* > $OUTPUT_FILE" >> $DETAILED_LOGFILE
+    "$@" >> $OUTPUT_FILE
+}
+
+describe() {
+    section
+    echo "** $@ **"
 }
 
 start() {
     echo -n "$@ . . ."
 }
 
-end() {
+finish() {
     echo " done!"
 }
 
 # Install all dependencies.
-# gcc compiles native binaries.
+# gcc and gcc-c++ compile native binaries.
 # gcc-c++ provides pthreads support.
 # cross-riscv64-gcc14 and cross-riscv64-elf-gcc14 compile riscv64 binaries.
 # dtc, libboost_regex-devel, libboost_system-devel are Spike dependencies.
@@ -31,7 +55,7 @@ end() {
 # git-core provides Git access.
 
 start "Installing dependencies"
-evoke sudo zypper install gcc gcc-c++ cross-riscv64-gcc14 cross-riscv64-elf-gcc14 dtc libboost_regex-devel libboost_system-devel make git-core
+evoke sudo zypper install -y gcc gcc-c++ cross-riscv64-gcc14 cross-riscv64-elf-gcc14 dtc libboost_regex-devel libboost_system-devel make git-core
 finish
 
 # Make some useful directories.
@@ -122,11 +146,7 @@ int main(int argc, char const *argv[])
 EOF
 finish
 
-# Build the test programs in the native architecture and RISC-V.
-
-start "Determining architecture"
-evoke export ARCH=$(uname -m)
-finish
+# Compile hello world program for native and riscv64 architectures.
 
 start "Compiling native hello world program ($ARCH target)"
 evoke gcc -o hello-$ARCH hello.c
@@ -135,3 +155,85 @@ finish
 start "Cross-compiling hello world program (riscv64 target)"
 evoke riscv64-elf-gcc -o hello-riscv64 hello.c
 finish
+
+# Describe and run the two resulting binaries.
+
+describe "file hello-$ARCH"
+print_evoke file hello-$ARCH
+
+describe "file hello-riscv64"
+print_evoke file hello-$ARCH
+
+describe "run hello-$ARCH"
+print_evoke ./hello-$ARCH
+
+describe "run hello-riscv64"
+print_evoke spike /usr/local/riscv64-elf/bin/pk hello-riscv64
+
+section
+
+# Compile factorinator program for native and riscv64 architectures.
+
+start "Compiling native factorinator program ($ARCH target)"
+evoke g++ -o factorinator-$ARCH factorinator.cpp
+finish
+
+start "Cross-compiling factorinator program (riscv64 target)"
+evoke riscv64-elf-g++ -o factorinator-riscv64 factorinator.cpp
+finish
+
+# Describe, run, and time the two resulting binaries.
+
+describe "time native factorinator-$ARCH"
+print_evoke time ./factorinator-$ARCH
+
+describe "time emulated factorinator-riscv64"
+print_evoke time spike /usr/local/riscv64-elf/bin/pk factorinator-riscv64
+
+describe "time native factorinator-$ARCH, \$1 = $((2**28))"
+print_evoke time ./factorinator-$ARCH $((2**28))
+
+describe "time emulated factorinator-riscv64, \$1 = $((2**28))"
+print_evoke time spike /usr/local/riscv64-elf/bin/pk factorinator-riscv64 $((2**28))
+
+section
+
+# Save description of hello world program binary instructions.
+
+start "Disassembling hello-$ARCH to hello-$ARCH.dumped.txt"
+export_evoke hello-$ARCH.dumped.txt objdump --disassemble-all hello-$ARCH
+
+start "Disassembling hello-riscv64 to hello-riscv64.dumped.txt"
+export_evoke hello-riscv64.dumped.txt riscv64-elf-objdump --disassemble-all hello-riscv64
+
+# Find entry point of hello world binary.
+
+describe "header hello-$ARCH (including entry point address)"
+print_evoke objdump -f hello-$ARCH
+
+section
+
+# Generate hex file representation of hello world binary.
+# elf2hex only works for RISC-V.
+
+describe "hex repr hello-riscv64"
+export_evoke hello-riscv64.hex.txt elf2hex 16 32768 hello-riscv64
+
+# Display hex representation.
+
+describe "hex dump hello-riscv64.hex.txt"
+evoke hexdump -C hello-riscv64.hex.txt
+
+# Display binary sizes
+
+describe "size hello-$ARCH"
+evoke size hello-$ARCH
+
+describe "size hello-riscv64"
+evoke size hello-riscv64
+
+describe "nm hello-$ARCH"
+evoke nm --print-size hello-$ARCH
+
+describe "nm hello-riscv64"
+evoke riscv64-elf-nm --print-size hello-riscv64
