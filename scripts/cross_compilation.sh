@@ -4,7 +4,7 @@ set -e
 
 # Set constants.
 
-DETAILED_LOGFILE=cross_compilation_log.txt
+DETAILED_LOGFILE=joseph_leskey_lab0_log.txt
 ARCH=$(uname -m)
 
 # Set up handlers.

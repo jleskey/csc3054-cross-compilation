@@ -4,7 +4,7 @@ set -e
 
 # Set constants.
 
-DETAILED_LOGFILE=emulation_log.txt
+DETAILED_LOGFILE=joseph_leskey_lab0_log.txt
 OS_IMAGE_LOCATION="http://download.opensuse.org/ports/riscv/tumbleweed/images/"
 OS_IMAGE_NAME="openSUSE-Tumbleweed-RISC-V-JeOS-efi.riscv64-2024.09.02-Build1.46"
 OS_IMAGE_EXTENSION=".raw"
