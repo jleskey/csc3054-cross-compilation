@@ -12,13 +12,14 @@ USER_ID="$1"
 USER=$(echo "$USER_ID" | cut -d "@" -f 1)
 HOST=$(echo "$USER_ID" | cut -d "@" -f 2)
 
-echo "Copying SSH key to $HOST as $USER . . ."
+echo "Copying SSH key to $HOST as $USER...\n"
 ssh-copy-id $USER_ID
 echo "Copied!"
 
-echo -n "Copying scripts to $HOST as $USER . . ."
+echo "\nCopying scripts to $HOST as $USER...\n"
 scp -r "$(dirname "$0")" "$USER_ID:scripts"
-echo "Copied!"
+echo "\nCopied!"
 
-echo "Time to roll!"
+echo "\nTime to roll!\n"
+clear
 ssh $USER_ID
