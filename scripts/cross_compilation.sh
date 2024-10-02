@@ -80,6 +80,8 @@ finish
 
 start "Building the proxy kernel"
 evoke cd riscv-pk
+# Avoid broken code.
+evoke git checkout -b safe-branch 1a52fa44
 evoke mkdir build
 evoke cd build
 evoke ../configure --host=riscv64-elf
